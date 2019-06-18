@@ -1,0 +1,22 @@
+Source: lua-nginx-resty-core
+Section: interpreters
+Priority: optional
+Maintainer: Kevin Roy <kevin.roy@opendatasoft.com>
+Build-Depends: debhelper (>= 11), dh-lua
+Standards-Version: 4.3.0.1
+Homepage: https://github.com/openresty/lua-resty-core
+
+Package: lua-nginx-resty-core
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, nginx-extras
+Description: FFI-based Lua API for ngx_http_lua_module and/or ngx_stream_lua_module
+ This pure Lua library reimplements part of the ngx_lua module's Nginx API for
+ Lua with LuaJIT FFI and installs the new FFI-based Lua API into the ngx.* and
+ ndk.* namespaces used by the ngx_lua module.
+ .
+ In addition, this Lua library implements any significant new Lua APIs of the
+ ngx_lua module as proper Lua modules, like ngx.semaphore and ngx.balancer.
+ .
+ The FFI-based Lua API can work with LuaJIT's JIT compiler. ngx_lua's default
+ API is based on the standard Lua C API, which will never be JIT compiled and
+ the user Lua code is always interpreted (slowly).
