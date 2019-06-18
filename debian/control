@@ -8,7 +8,7 @@ Homepage: https://github.com/openresty/lua-resty-core
 
 Package: lua-nginx-resty-core
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, nginx-extras
+Depends: ${shlibs:Depends}, ${misc:Depends}, nginx-extras, lua-nginx-resty-lrucache
 Description: FFI-based Lua API for ngx_http_lua_module and/or ngx_stream_lua_module
  This pure Lua library reimplements part of the ngx_lua module's Nginx API for
  Lua with LuaJIT FFI and installs the new FFI-based Lua API into the ngx.* and
